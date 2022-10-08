@@ -6,6 +6,6 @@ Do give a like:)
 
 ***
 
-HackerRank- Contains problems from the HackeRank.
+**HackerRank**- Contains problems from the HackeRank.
 
-Leetcode- Contains Problems from Leetcode.
+**Leetcode**- Contains Problems from Leetcode.
