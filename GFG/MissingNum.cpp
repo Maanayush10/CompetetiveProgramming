@@ -1,3 +1,4 @@
+#include <bits/stdc++.h>
 //GFG Missing number in array
  int missingNumber(vector<int>& array, int n) {
         //your code here
