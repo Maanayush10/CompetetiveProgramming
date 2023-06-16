@@ -1,8 +1,8 @@
+//using moore's voting algo
 #include<bits/stdc++.h>
 using namespace std;
 
 
-//using moore's voting algo
 //o(N) time and o(1) space
 int majorityElement(int a[], int size)
     {
