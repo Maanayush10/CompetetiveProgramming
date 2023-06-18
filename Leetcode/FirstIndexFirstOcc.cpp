@@ -1,3 +1,5 @@
+//leetcode easy first index of first occurence of a needle in haystack
+
 #include <bits/stdc++.h>
 using namespace std;
   int strStr(string haystack, string needle) {
