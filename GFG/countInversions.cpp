@@ -71,3 +71,10 @@ long long mergeSort(long long int arr[], long long low, long long high) {
     }
 
 };
+
+int main(){
+    long long arr[] ={2, 4, 1, 3, 5};
+    int ans = inversionCount(arr, 5);
+    cout<<ans;
+    return 0;
+}
