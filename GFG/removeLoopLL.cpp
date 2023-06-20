@@ -1,3 +1,5 @@
+#include <stdio.h>
+using namespace std;
 struct Node
 {
     int data;
@@ -44,3 +46,7 @@ void removeLoop(Node* head)
             }
         fast->next= NULL;
         }
+int main(){
+    //my general code
+    return 0;
+}
