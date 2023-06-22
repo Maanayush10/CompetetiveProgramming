@@ -1,3 +1,5 @@
+//gfg remove loop from a linkedlist
+//Hint for self- use Floyd's Algorithm
 #include <stdio.h>
 using namespace std;
 struct Node
