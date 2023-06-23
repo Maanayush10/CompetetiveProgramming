@@ -7,6 +7,7 @@ You must write an algorithm that runs in O(n) time and without using the divisio
 */
 
 #include <bits/stdc++.h>
+using namespace std;
 vector<int> productExceptSelf(vector<int>& nums) {
 
         vector<int> output(nums.size(), 1);
