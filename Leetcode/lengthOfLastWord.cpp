@@ -1,9 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
-
-class Solution {
-public:
-    int lengthOfLastWord(string s) {
+int lengthOfLastWord(string s) {
         int count=0;
         bool flag=false;
         for(int i=s.size()-1; i>=0; i--)
@@ -21,7 +18,6 @@ public:
 
         return count;
     }
-};
 int main(){
     string s="I am Ayushman and I am the Best";
     Solution sol;
