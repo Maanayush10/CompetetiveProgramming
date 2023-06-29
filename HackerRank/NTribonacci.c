@@ -1,5 +1,4 @@
 #include<stdio.h>
-
 int tribonacci(int n){
 	if(n==0)
     {
