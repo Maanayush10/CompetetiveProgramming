@@ -2,6 +2,7 @@
 
 #include <bits/stdc++.h>
 using namespace std;
+
   int strStr(string haystack, string needle) {
     const int m = haystack.length();
     const int n = needle.length();
