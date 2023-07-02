@@ -27,6 +27,7 @@ class Solution
             return ans;
         }
 };
+
 int main(){
     int n;
     cout<<"Enter the value of N:"<<endl;
