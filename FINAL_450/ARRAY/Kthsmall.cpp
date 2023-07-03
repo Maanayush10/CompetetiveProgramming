@@ -5,13 +5,14 @@
 
     k=3
     kth small element = 3
-
+    
 */
 
 
 /*
 
 Approach used by me : Sort the given array and find the kth element
+
 */
 #include<bits/stdc++.h>
 using namespace std;
