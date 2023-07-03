@@ -9,6 +9,8 @@ struct ListNode {
       ListNode(int x, ListNode *next) : val(x), next(next) {}
   };
 
+
+//bruteforce
 ListNode* middleNode(ListNode* head) {
         int count=0;
         int mid=0;
@@ -29,6 +31,17 @@ ListNode* middleNode(ListNode* head) {
         return dummy;
     }
 
+
+//optimal
+   ListNode* middleNode2(ListNode* head) {
+        ListNode * fast= head, *slow =head;
+        while(fast!=NULL && fast->next!=NULL)
+        {
+            slow= slow->next;
+            fast= fast->next->next;
+        }
+        return slow;
+    }
 int main(){
   //main logic here
   return 0;
