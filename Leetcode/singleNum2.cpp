@@ -1,6 +1,21 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+
+int singleNumber2(vector<int>& nums) {
+        unordered_map<int, int> freq;
+        for (int num : nums) {
+            freq[num]++;
+        }
+        for (int num : nums) {
+            if (freq[num] == 1) {
+                return num;
+            }
+        }
+        return 0; // or any default value as per the problem statement
+    }
+
+
 //brute force approach
 int singleNumber(vector<int> &nums)
 {
