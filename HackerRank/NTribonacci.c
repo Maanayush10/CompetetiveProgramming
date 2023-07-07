@@ -1,14 +1,16 @@
 #include<stdio.h>
 int tribonacci(int n){
-	if(n==0)
+    if(n==0)
     {
         return 0;
     }
+	
     if(n<3)
     {
         return 1;
     }
     int x=0, y=1, z=1, result;
+	
     for(int i=3; i<=n; i++)
     {
         result= x+y+z;
@@ -16,6 +18,7 @@ int tribonacci(int n){
         y=z;
         z=result;
     }
+	
     return result;
 }
 
