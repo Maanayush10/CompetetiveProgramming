@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
-
+//brute force method
 vector<vector<int>> threeSum(vector<int>& nums) {
         set<vector<int>>st;
         for(int i=0; i<nums.size(); i++)
