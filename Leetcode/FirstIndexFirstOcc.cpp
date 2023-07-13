@@ -1,3 +1,4 @@
+
 //leetcode easy first index of first occurence of a needle in haystack
 
 #include <bits/stdc++.h>
