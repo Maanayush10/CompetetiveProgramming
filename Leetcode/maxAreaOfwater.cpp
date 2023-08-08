@@ -38,6 +38,28 @@ int small(int num1,  int num2)
 
 
 
+//optimized O(N) approach
+int maxArea2(vector<int>& height) {
+        int maxArea=0;
+        int left= 0;
+        int right= height.size()-1;
+
+        while(left < right)
+        {
+            int width= right -left;
+            maxArea = max(maxArea, min(height[right], height[left])*width);
+            if(height[left]<height[right])
+            {
+                left++;
+            }
+            else
+            {
+                right--;
+            }
+        }
+        return maxArea;
+    }
+
 int main()
 {
   //main logic here
