@@ -1,6 +1,26 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+//optimised approach no extra space (in place)
+int isPalindrome2(string S)
+	{
+	    // Your code goes here
+	    int i=0;
+	    int j= S.length()-1;
+	    while(i<j)
+	    {
+	        if(S[i]!=S[j])
+	        {
+	            return 0;//  it is not a pallindrome
+	        }
+	       i++;
+	       j--;
+	    }
+	    return 1; //it is a pallindrome
+	}
+
+
+// below got TLE
 int isPalindrome(string S)
 	{
 	    // Your code goes here
