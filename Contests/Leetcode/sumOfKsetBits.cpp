@@ -61,7 +61,7 @@ public:
         int sum=0;
         for(int i=0; i<nums.size();i++)
         {
-            if(countSetBits(nums[i])==k)
+            if(countSetBits(i)==k)
             {
                 sum= sum+nums[i];
             }
