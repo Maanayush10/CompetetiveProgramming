@@ -52,30 +52,33 @@ It's guaranteed that val does not exist in the original BST.
 class Solution {
 public:
     TreeNode* insertIntoBST(TreeNode* root, int val) {
-        TreeNode* startNode= root;
-        while(startNode!=NULL)
+        if(root==nullptr)
         {
-            if(startNode->left==NULL && startNode->right==NULL)
+            TreeNode * node= new TreeNode(val);
+            return node;
+        }
+        TreeNode* parent=nullptr;
+        TreeNode* current=root;
+        while(current!=nullptr)
+        {
+            parent=current;
+            if(val>current->val)
             {
-                break;
+                current= current->right;
             }
-            if(val>startNode->val)
+            else if(val<current->val)
             {
-              startNode= startNode->right;  
-            }
-            else if(val<startNode->val)
-            {
-              startNode= startNode->left;  
+                current= current->left;
             }
         }
-        TreeNode * node= new TreeNode(val);
-        if(val>startNode->val)
+        TreeNode * node = new TreeNode(val);
+        if(val>parent->val)
         {
-            startNode->right= node;
+            parent->right= node;
         }
-        else if(val<startNode->val)
+        else if(val<parent->val)
         {
-            startNode->left= node;
+            parent->left= node;
         }
         return root;
     }
