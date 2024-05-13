@@ -28,8 +28,20 @@ Follow up: If the BST is modified often (i.e., we can do insert and delete opera
 */
 
 //brute force approach -> traverse the tree and keep each node's value in a vector, sort the vector, and return the Kth smallest element
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+ *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+ * };
+ */
 class Solution {
 public:
+    //using inorder traversal as inorder traversal gives a non decreasing arr
     void traverse(TreeNode* root, vector<int>& traverseARR)
     {
         if(root==NULL)
@@ -37,19 +49,40 @@ public:
             return;
         }
         traverse(root->left,traverseARR);
-        traverse(root->right,traverseARR);
         traverseARR.push_back(root->val);
+        traverse(root->right,traverseARR);
     }
-    int kthSmallest(TreeNode* root, int k) {
-        vector<int> myArr;
-        traverse(root, myArr);
-        sort(myArr.begin(), myArr.end());
-
-        for(int k: myArr)
+   //optimal solution
+    void check(TreeNode* root, int &count, int k, int & ans)
+    {
+        if(root==NULL)
         {
-            cout<<" "<<k;
+            return;
         }
-        cout<<endl;
-        return myArr[k-1];
+        check(root->left, count, k, ans);
+        count++;
+        if(count==k)
+        {
+            ans= root->val;
+            return;
+        }
+        check(root->right,count, k, ans);
+    }
+
+    int kthSmallest(TreeNode* root, int k) {
+        // vector<int> myArr;
+        // traverse(root, myArr);
+        // sort(myArr.begin(), myArr.end());
+        // for(int k: myArr)
+        // {
+        //     cout<<" "<<k;
+        // }
+        // cout<<endl;
+        // return myArr[k-1];
+
+
+        int ans, count=0;
+        check(root, count, k, ans);
+        return ans;
     }
 };
