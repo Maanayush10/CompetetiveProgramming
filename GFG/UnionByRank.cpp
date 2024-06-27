@@ -8,6 +8,8 @@ Union (U, V)
 2)Find rank if pu and pv.
 3)Connect smaller rank to larger rank, always.
 
+
+Note: If you connect larger rank to smaller rank, you will have to traverse a longer path during size compression.
 */
 //data-structure for UnionByRank
 class DisjointSet
